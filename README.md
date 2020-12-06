@@ -1,4 +1,5 @@
 <center><b>Mybatis Plus</b></center>
+A ready to use plugin on the top of Mybatis, get your CURD operation withany any code!
 
 1. Summary
 

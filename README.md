@@ -1,5 +1,5 @@
 <center><b>Mybatis Plus</b></center>
-A ready to use plugin on the top of Mybatis, get your CURD operation withany any code!
+A ready to use plugin on the top of Mybatis, get your CURD operation withany any code!</br>
 Author: Jeff Du Hong
 
 1. Summary

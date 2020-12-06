@@ -1,4 +1,4 @@
-# 配置数据源
+# configure datasource
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -6,13 +6,13 @@ spring:
     username: root
     password: '#Dsf135246'
 
-# 配置日志
+# configure logging
 logging:
   level:
     root: warn
-    com.dsf.mp.pagination.dao: trace
+    com.jeff.mp.pagination.dao: trace
   pattern:
     console: '%p%m%n'
 
 mybatis-plus:
-  mapper-locations: ['classpath:/mapper/*Mapper.xml']
+  mapper-locations: [ 'classpath:/mapper/*Mapper.xml' ]

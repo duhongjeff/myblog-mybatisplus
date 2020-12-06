@@ -10,9 +10,9 @@ spring:
 logging:
   level:
     root: warn
-    com.dsf.mp.service.dao: trace
+    com.jeff.mp.service.dao: trace
   pattern:
     console: '%p%m%n'
 
 mybatis-plus:
-  mapper-locations: ['classpath:/mapper/*Mapper.xml']
+  mapper-locations: [ 'classpath:/mapper/*Mapper.xml' ]

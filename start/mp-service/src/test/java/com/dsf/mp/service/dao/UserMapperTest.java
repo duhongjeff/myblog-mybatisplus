@@ -1,10 +1,10 @@
-package com.dsf.mp.service.dao;
+package com.jeff.mp.service.dao;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.dsf.mp.service.ServiceApp;
-import com.dsf.mp.service.dao.UserMapper;
-import com.dsf.mp.service.entity.User;
-import com.dsf.mp.service.vo.UserVo;
+import com.jeff.mp.service.ServiceApp;
+import com.jeff.mp.service.dao.UserMapper;
+import com.jeff.mp.service.entity.User;
+import com.jeff.mp.service.vo.UserVo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,11 +26,11 @@ public class UserMapperTest {
         userVo.setAgeStart(25);
         userVo.setHobby("学");
 
-        Page<User> page = new Page<> (1,2);
-        userMapper.selectUserPage(page,userVo);
+        Page<User> page = new Page<>(1, 2);
+        userMapper.selectUserPage(page, userVo);
 
-        System.out.println("总页数："+page.getPages());
-        System.out.println("总记录数："+page.getTotal());
+        System.out.println("总页数：" + page.getPages());
+        System.out.println("总记录数：" + page.getTotal());
         List<User> list = page.getRecords();
         list.forEach(System.out::println);
     }

@@ -1,4 +1,4 @@
-# 配置数据源
+# configure datasource
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -6,11 +6,19 @@ spring:
     username: root
     password: '#Dsf135246'
 
-# 配置日志
+# logging
 logging:
   level:
     root: warn
-    com.dsf.mp.annotation.dao: trace
+    com.jeff.mp.annotation.dao: trace
   pattern:
     console: '%p%m%n'
+
+# global configuration for mybatis plus
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: id_worker
+      insert-strategy: not_null
+      update-strategy: not_null
 

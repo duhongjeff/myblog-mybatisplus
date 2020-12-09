@@ -328,6 +328,24 @@ Author: Jeff Du Hong
          list.forEach(System.out::println);
      }
      ```
+  
+   - select with pagination
+
+     ```java
+     @Test
+     public void selectPage() {
+        LambdaQueryWrapper<User> query = new LambdaQueryWrapper<>();
+        query.ge(User::getAge, 26).orderByDesc(User::getCreateTime);
+
+        Page<User> page = new Page<>(1, 2); // 1 is the current page, 2 is how many rows in the page to display
+        userMapper.selectPage(page, query);
+
+        System.out.println("total pages：" + page.getPages());
+        System.out.println("total records：" + page.getTotal());
+        List<User> list = page.getRecords();//The object returned by paging is the same as the object passed in
+        list.forEach(System.out::println);
+     }
+     ```   
 
    - select with nested query
 
